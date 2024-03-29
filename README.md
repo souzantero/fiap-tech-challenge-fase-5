@@ -6,6 +6,7 @@ Bem-vindo ao repositório do FIAP Tech Challenge Fase 5. Este documento fornece 
 
 O projeto é dividido em três serviços principais, cada um com seu próprio repositório:
 
+- **Autenticação**: Gerencia o acesso do usuário. [Acessar repositório](https://github.com/souzantero/fiap-tech-challenge-auth)
 - **Produtos**: Gerencia informações de produtos. [Acessar repositório](https://github.com/souzantero/fiap-tech-challenge-product)
 - **Pedido**: Responsável pela criação e gestão de pedidos. [Acessar repositório](https://github.com/souzantero/fiap-tech-challenge-order)
 - **Pagamento**: Processa pagamentos e comunicações com gateways de pagamento. [Acessar repositório](https://github.com/souzantero/fiap-tech-challenge-payment)
@@ -22,6 +23,9 @@ Adotamos o padrão SAGA coreografado devido à sua simplicidade de implementaç�
 - O serviço de **Pagamentos** escuta esta fila e inicia a comunicação com o gateway de pagamento.
 - Após a invocação do webhook pela API do serviço de pagamento, mensagens são enviadas para filas de pagamento aceito ou rejeitado, conforme o caso.
 - O serviço de **Pedidos** é então responsável por processar estas mensagens e realizar as ações compensatórias necessárias.
+
+
+#### [Video da demonstração do padrão SAGA](https://drive.google.com/file/d/19u6_CYP4BvTFcsloMdjEKA2NZtTta8Qo/view?usp=sharing)
 
 ### Segurança
 
